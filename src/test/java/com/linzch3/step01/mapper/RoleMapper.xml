@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.linzch3.step01.mapper.RoleMapper">
+  <!--  需要注意：mysql的字段命名是小写下划线，java类字段命名是驼峰，需要转换一下-->
+  <select id="getRole" resultType="com.linzch3.step01.pojo.Role">
+    SELECT id AS id, role_name AS roleName, note AS note
+    FROM role
+    WHERE id = #{id}
+  </select>
+</mapper>
